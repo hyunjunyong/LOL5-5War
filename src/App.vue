@@ -92,10 +92,11 @@ ul {
 }
 ul li {
   display: inline-block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  cursor: pointer;
 }
 .vertical {
   display: none;
