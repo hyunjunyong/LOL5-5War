@@ -51,7 +51,7 @@ export default {
       if (href === 'https://open.kakao.com/o/gWUT7Ble') {
         window.open(href, '_blank');
       } else {
-        this.$router.push(href);
+        this.$router.push(href).catch(() => {});
       }
     },
   },
