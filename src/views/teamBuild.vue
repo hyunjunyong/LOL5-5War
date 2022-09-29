@@ -73,8 +73,24 @@ export default {
   data() {
     return {
       teamMember: '',
-      allTeamMember: [],
+      allTeamMember: [
+        '수성못',
+        '여채정',
+        '혀나님',
+        '나밟꿈',
+        '한은총재',
+        'EKAPE',
+        '대봉동왕주먹',
+        '문고리만우리집',
+        '머스탱',
+        '솜포도',
+      ],
     };
+  },
+  created() {
+    this.$api.getTeam(this.allTeamMember).then((res) => {
+      console.log(res);
+    });
   },
   methods: {
     addTeamMember() {

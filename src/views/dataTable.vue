@@ -70,4 +70,7 @@ h2::after {
   border-top: 10px solid #e9c70a;
   border-right: 10px solid transparent;
 }
+/* .v-data-table >>> tr {
+  background-color: red;
+} */
 </style>

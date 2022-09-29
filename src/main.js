@@ -5,11 +5,13 @@ import store from './store';
 import vuetify from './plugins/vuetify';
 import common from './utils/common';
 import axios from './utils/axios';
+import API from './utils/axios';
 Vue.config.productionTip = false;
 
 Vue.prototype.$common = common;
 Vue.prototype.$axios = axios;
 
+Vue.prototype.$api = new API();
 new Vue({
   router,
   store,
