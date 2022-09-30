@@ -2,13 +2,34 @@
   <v-container>
     <h2>현재 팀원</h2>
     <v-text-field v-model="search" single-line></v-text-field>
-    <v-data-table
+    <!-- <v-data-table
       :headers="$common.headers"
       :items="itemArray"
       :items-per-page="15"
-      class="elevation-1"
+      class="elevation-1 desktop"
       :search="search"
-    ></v-data-table>
+    ></v-data-table> -->
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th v-for="(item, index) in title" :key="index">
+              {{ item }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in simpleItemArray" :key="item.name">
+            <td>{{ item.nick }}</td>
+            <td>{{ item.tier }}</td>
+            <td>
+              {{ emptyPosi(item.position) }}
+            </td>
+            <td>{{ item.score }}</td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
   </v-container>
 </template>
 
@@ -17,6 +38,8 @@ export default {
   name: 'name',
   data() {
     return {
+      title: ['nick', 'tier', 'position', 'score'],
+      member: [],
       search: '',
     };
   },
@@ -37,8 +60,33 @@ export default {
         };
       });
     },
+    simpleItemArray() {
+      return this.$common.member.map((e) => {
+        return {
+          nick: e.nick,
+          tier: e.tier,
+          position: [
+            e.top ? 'TOP' : '',
+            e.jg ? 'JG' : '',
+            e.mid ? 'MID' : '',
+            e.ad ? 'AD' : '',
+            e.sup ? 'SUP' : '',
+          ],
+          score: e.score,
+        };
+      });
+      // return 'asdf';
+    },
   },
-  methods: {},
+
+  methods: {
+    emptyPosi(array) {
+      let a = array.filter((item) => {
+        return item !== null && item !== undefined && item !== '';
+      });
+      return a.join(',');
+    },
+  },
 };
 </script>
 

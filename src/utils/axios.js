@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_ENDPOINT = {
-  getTeam: 'http://suehig.synology.me:10500/lolteam',
+  getTeam: 'https://suehig.synology.me:10500/lolteam',
 };
 
 export default class API {
