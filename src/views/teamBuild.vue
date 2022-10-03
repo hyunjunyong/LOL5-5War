@@ -33,32 +33,25 @@
             </tr>
           </thead>
           <tbody>
-            <!-- <tr
-          v-for="item in desserts"
-          :key="item.name"
-        >
-          <td>{{ item.name }}</td>
-          <td>{{ item.calories }}</td>
-        </tr> -->
             <tr>
-              <td>혀나님</td>
-              <td>수성못</td>
+              <td>{{ teamA.top }}</td>
+              <td>{{ teamB.top }}</td>
             </tr>
             <tr>
-              <td>여채정</td>
-              <td>음식</td>
+              <td>{{ teamA.jug }}</td>
+              <td>{{ teamB.jug }}</td>
             </tr>
             <tr>
-              <td>대봉동</td>
-              <td>나밟꿈</td>
+              <td>{{ teamA.mid }}</td>
+              <td>{{ teamB.mid }}</td>
             </tr>
             <tr>
-              <td>한은총재</td>
-              <td>머스탱</td>
+              <td>{{ teamA.adc }}</td>
+              <td>{{ teamB.adc }}</td>
             </tr>
             <tr>
-              <td>탈출</td>
-              <td>문고리</td>
+              <td>{{ teamA.sup }}</td>
+              <td>{{ teamB.sup }}</td>
             </tr>
           </tbody>
         </template>
@@ -73,30 +66,34 @@ export default {
   data() {
     return {
       teamMember: '',
-      // allTeamMember: [
-      //   '수성못',
-      //   '여채정',
-      //   '혀나님',
-      //   '나밟꿈',
-      //   '한은총재',
-      //   'EKAPE',
-      //   '대봉동왕주먹',
-      //   '문고리만우리집',
-      //   '머스탱',
-      //   '솜포도',
-      // ],
-      allTeamMember: [],
+      allTeamMember: [
+        '수성못',
+        '여채정',
+        '혀나님',
+        '나밟꿈',
+        '한은총재',
+        'EKAPE',
+        '대봉동왕주먹',
+        '문고리만우리집',
+        '머스탱',
+        '솜포도',
+      ],
+
+      teamA: [],
+      teamB: [],
     };
   },
   created() {
-    // this.$api
-    //   .getTeam(this.allTeamMember)
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    this.$api
+      .getTeam(this.allTeamMember)
+      .then((res) => {
+        console.log(res);
+        this.teamA = res.data.teamA[0];
+        this.teamB = res.data.teamB[0];
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
   methods: {
     addTeamMember() {
