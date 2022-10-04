@@ -2,13 +2,14 @@
   <v-container>
     <h2>현재 팀원</h2>
     <v-text-field v-model="search" single-line></v-text-field>
-    <!-- <v-data-table
+    <v-data-table
       :headers="$common.headers"
       :items="itemArray"
       :items-per-page="15"
       class="elevation-1 desktop"
       :search="search"
-    ></v-data-table> -->
+      v-if="tableWidth"
+    ></v-data-table>
     <v-simple-table>
       <template v-slot:default>
         <thead>
@@ -41,9 +42,17 @@ export default {
       title: ['nick', 'tier', 'position', 'score'],
       member: [],
       search: '',
+      tableWidth: false,
+      windowWidth: window.innerWidth,
     };
   },
   created() {},
+  beforeDestroy() {
+    window.removeEventListener('resize', this.handleResize);
+  },
+  mounted() {
+    window.addEventListener('resize', this.handleResize);
+  },
   computed: {
     itemArray() {
       return this.$common.member.map((e) => {
@@ -75,11 +84,16 @@ export default {
           score: e.score,
         };
       });
-      // return 'asdf';
     },
   },
 
   methods: {
+    handleResize() {
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth > 800) {
+        this.tableWidth = true;
+      } else this.tableWidth = false;
+    },
     emptyPosi(array) {
       let a = array.filter((item) => {
         return item !== null && item !== undefined && item !== '';
