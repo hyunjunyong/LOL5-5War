@@ -21,6 +21,11 @@ export default new VueRouter({
       name: 'teambuild',
       component: () => import('../views/teamBuild.vue'),
     },
+    {
+      path: '/calendar',
+      name: 'calendar',
+      component: () => import('../views/calendar.vue'),
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     window.scrollTo(0, 0);

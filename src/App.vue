@@ -62,6 +62,10 @@ export default {
           href: '/dataTable',
           title: '팀원 확인하기',
         },
+        {
+          href: '/calendar',
+          title: '나밟꿈 내전 전적 확인',
+        },
       ],
     };
   },
