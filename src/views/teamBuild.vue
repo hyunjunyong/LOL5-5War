@@ -25,13 +25,18 @@
         v-model="allTeamMember"
       ></v-textarea>
       <v-row no-gutters justify="center" class="mb-5">
-        <v-col cols="auto"
+        <v-col cols="auto" class="mr-3"
           ><v-btn
             height="32px"
             small
             color="secondary"
             @click="getBuildMember()"
             ><v-icon dark> mdi-plus </v-icon>내전 팀 짜기 버튼</v-btn
+          ></v-col
+        >
+        <v-col cols="auto"
+          ><v-btn height="32px" small color="success" @click="initMember()"
+            ><v-icon dark> mdi-pencil </v-icon>멤버 초기화하기</v-btn
           ></v-col
         >
       </v-row>
@@ -105,17 +110,25 @@ export default {
   },
   created() {},
   methods: {
+    initMember() {
+      this.allTeamMember = [];
+    },
     getBuildMember() {
-      this.$api
-        .getTeam(this.allTeamMember)
-        .then((res) => {
-          console.log(res);
-          this.teamA = res.data.teamA[0];
-          this.teamB = res.data.teamB[0];
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      if (this.allTeamMember.length === 10) {
+        this.$api
+          .getTeam(this.allTeamMember)
+          .then((res) => {
+            console.log(res);
+            alert('팀이 완성되었습니다.');
+            this.teamA = res.data.teamA[0];
+            this.teamB = res.data.teamB[0];
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      } else {
+        alert('10명이 아닙니다.');
+      }
     },
     addTeamMember() {
       this.allTeamMember.push(this.teamMember);
