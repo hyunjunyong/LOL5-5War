@@ -17,7 +17,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="item in $common.warResult.data" :key="item.name">
+                  <tr>
                     <td>
                       <v-card>
                         <v-card-title>내전 1팀 결과</v-card-title>
@@ -31,7 +31,13 @@
                           <p>
                             2경기 : <br />{{ item.teamA.second.join('\r\n') }}
                           </p>
-                          <p>3경기 : <br />{{ item.teamA.third.join('\n') }}</p>
+                          <p>
+                            3경기 : <br />{{
+                              item.teamA.third.length
+                                ? item.teamA.third.join('\n')
+                                : '3경기를 하지 않았습니다.'
+                            }}
+                          </p>
                         </v-card-text>
                       </v-card>
                     </td>
@@ -48,7 +54,13 @@
                           <p>
                             2경기 : <br />{{ item.teamA.second.join('\n') }}
                           </p>
-                          <p>3경기 : <br />{{ item.teamA.third.join('\n') }}</p>
+                          <p>
+                            3경기 : <br />{{
+                              item.teamA.third.length
+                                ? item.teamA.third.join('\n')
+                                : '3경기를 하지 않았습니다.'
+                            }}
+                          </p>
                         </v-card-text>
                       </v-card>
                     </td>
