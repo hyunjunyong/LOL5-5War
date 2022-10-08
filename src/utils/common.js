@@ -200,7 +200,7 @@ var common = {
       mid: false,
       ad: false,
       sup: true,
-      score: '',
+      score: '5',
       remark: '음식 피셜 플1서폿',
     },
     {
@@ -211,7 +211,7 @@ var common = {
       mid: false,
       ad: false,
       sup: false,
-      score: '',
+      score: '중중',
       remark: '사이드는 묵직하게',
     },
     {
@@ -222,7 +222,7 @@ var common = {
       mid: true,
       ad: true,
       sup: false,
-      score: '',
+      score: '4',
       remark: '경찰아찌, 프로포폴(총재님 지어주심)',
     },
     {
@@ -233,7 +233,7 @@ var common = {
       mid: true,
       ad: true,
       sup: false,
-      score: '',
+      score: '3',
       remark: '개억까당하는중',
     },
     {
@@ -244,7 +244,7 @@ var common = {
       mid: false,
       ad: false,
       sup: false,
-      score: '',
+      score: '4',
       remark: '워웍 그자체 정글 워황 , 샤코 투챔',
     },
     {
@@ -277,7 +277,7 @@ var common = {
       mid: false,
       ad: false,
       sup: true,
-      score: '',
+      score: '3',
       remark: '유부초밥드립에 뿜음, 플레4서폿유저 출신',
     },
     {
@@ -299,7 +299,7 @@ var common = {
       mid: true,
       ad: true,
       sup: true,
-      score: '',
+      score: '4',
       remark: 'me',
     },
     {
@@ -310,8 +310,8 @@ var common = {
       mid: false,
       ad: false,
       sup: false,
-      score: '',
-      remark: '솔랭정신, 녹턴원챔, 자칭 캐리머신, 강타 잘못 씀',
+      score: '중중',
+      remark: '솔랭정신, 녹턴원챔, 자칭 캐리머신, 강타 잘못 씀,여채정 제자',
     },
     {
       nick: '곰지영',
@@ -332,7 +332,7 @@ var common = {
       mid: true,
       ad: false,
       sup: false,
-      score: '',
+      score: '중하',
       remark: '문고리도우리집(수성못), 애니비아 원챔급의 픽률',
     },
     {
@@ -344,7 +344,7 @@ var common = {
       ad: true,
       sup: true,
       score: '',
-      remark: '',
+      remark: 'bhc',
     },
     {
       nick: '꽃방울니코',
@@ -354,7 +354,7 @@ var common = {
       mid: true,
       ad: false,
       sup: false,
-      score: '',
+      score: '5',
       remark: '다이아1 출신 그냥 모든겜 고수',
     },
     {
@@ -362,11 +362,11 @@ var common = {
       tier: 'P',
       top: false,
       jg: false,
-      mid: false,
+      mid: true,
       ad: true,
-      sup: false,
-      score: '',
-      remark: '원딜인데 강철멘탈',
+      sup: true,
+      score: '3',
+      remark: '강철멘탈',
     },
     {
       nick: '피야',
@@ -376,7 +376,7 @@ var common = {
       mid: true,
       ad: true,
       sup: true,
-      score: '',
+      score: '4',
       remark: '서폿 골드 원딜미드 다4',
     },
     {
@@ -387,7 +387,7 @@ var common = {
       mid: false,
       ad: true,
       sup: false,
-      score: '',
+      score: '5',
       remark: '당신 카밀 아트는 벤이야!',
     },
     {
@@ -409,7 +409,7 @@ var common = {
       mid: false,
       ad: false,
       sup: false,
-      score: '',
+      score: '6',
       remark: '응애장인, 자칭 이렐장인, 정글은 진짜 장인;;',
     },
     {
@@ -420,7 +420,7 @@ var common = {
       mid: true,
       ad: false,
       sup: false,
-      score: '',
+      score: '5',
       remark: '롤도 잘하고 현실도 챌린저인 이런 불공평한 세상!',
     },
     {
@@ -431,7 +431,7 @@ var common = {
       mid: false,
       ad: true,
       sup: false,
-      score: '',
+      score: '4',
       remark: '원딜러인데 티모야 힘내...?',
     },
     {
@@ -442,7 +442,7 @@ var common = {
       mid: false,
       ad: true,
       sup: false,
-      score: '',
+      score: '5',
       remark: '닉 = 장인',
     },
     {
@@ -453,7 +453,7 @@ var common = {
       mid: false,
       ad: false,
       sup: false,
-      score: '',
+      score: '4',
       remark: '롤체D, 샤코원챔',
     },
     {
@@ -464,7 +464,7 @@ var common = {
       mid: false,
       ad: false,
       sup: false,
-      score: '',
+      score: '5',
       remark: '토익장인 ,킨드원챔',
     },
     {
@@ -475,7 +475,7 @@ var common = {
       mid: true,
       ad: false,
       sup: false,
-      score: '',
+      score: '5',
       remark: '미드럼블 원챔 따른 챔프잡을시 S~G사이 추정',
     },
     {
@@ -486,7 +486,7 @@ var common = {
       mid: true,
       ad: true,
       sup: true,
-      score: '',
+      score: '6',
       remark: '뚝배기 장인',
     },
     {
@@ -497,7 +497,7 @@ var common = {
       mid: false,
       ad: false,
       sup: false,
-      score: '',
+      score: '5',
       remark: '항상 캐리를 외치시는 진정한 탑솔러, 노익장',
     },
     {
@@ -508,7 +508,7 @@ var common = {
       mid: false,
       ad: false,
       sup: true,
-      score: '',
+      score: '6',
       remark: '음 식 , 상병 신음식',
     },
   ],

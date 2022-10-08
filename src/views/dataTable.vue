@@ -46,7 +46,11 @@ export default {
       windowWidth: window.innerWidth,
     };
   },
-  created() {},
+  created() {
+    this.$api.getMember().then((res) => {
+      console.log(res);
+    });
+  },
   beforeDestroy() {
     window.removeEventListener('resize', this.handleResize);
   },

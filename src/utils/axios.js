@@ -2,8 +2,9 @@ import axios from 'axios';
 
 const API_ENDPOINT = {
   getTeam: 'https://suehig.synology.me:10500/lolteam',
+  getMember: 'https://suehig.synology.me:10500/member',
 };
-
+// rest로 get/put/post/delete 다 갑시다
 export default class API {
   // constructor() {
   //   this.urlBase = process.env.VUE_APP_API_HOST;
@@ -78,5 +79,8 @@ export default class API {
     return this.post(API_ENDPOINT.getTeam, {
       nick: nick,
     });
+  }
+  getMember() {
+    return this.get(API_ENDPOINT.getMember);
   }
 }

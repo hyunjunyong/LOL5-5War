@@ -1,9 +1,13 @@
 <template>
   <v-container>
-    <h2>나밟꿈의 내전 전적 확인하기</h2>
+    <h2>나밟꿈의 내전 전적 확인하기 현재 5승 1패</h2>
     <template>
       <v-expansion-panels class="mt-10">
-        <v-expansion-panel v-for="(item, i) in $common.warResult.data" :key="i">
+        <v-expansion-panel
+          class="mb-3"
+          v-for="(item, i) in $common.warResult.data"
+          :key="i"
+        >
           <v-expansion-panel-header>
             {{ item.date }} 결과 : {{ item.result }}
           </v-expansion-panel-header>
