@@ -1,19 +1,24 @@
 <template>
-  <div class="m-10">
-    랜덤 사다리 팀 짜기
-    <div>
-      <h2>Team 1</h2>
-      <ul>
-        <li v-for="(player, index) in team1" :key="index">
-          {{ player.nickname }} - {{ player.position }}
-        </li>
-      </ul>
-      <h2>Team 2</h2>
-      <ul>
-        <li v-for="(player, index) in team2" :key="index">
-          {{ player.nickname }} - {{ player.position }}
-        </li>
-      </ul>
+  <div class="relative m-10">
+    <p>랜덤 사다리 팀 짜기</p>
+    <nuxt-img src="/img/versus.jpg" />
+    <div class="team_building">
+      <div class="team_section">
+        <h2>Team 1</h2>
+        <ul>
+          <li v-for="(player, index) in team1" :key="index">
+            {{ player.nickname }} - {{ player.position }}
+          </li>
+        </ul>
+      </div>
+      <div class="team_section">
+        <h2>Team 2</h2>
+        <ul>
+          <li v-for="(player, index) in team2" :key="index">
+            {{ player.nickname }} - {{ player.position }}
+          </li>
+        </ul>
+      </div>
     </div>
     <el-button @click="goRandom()">랜덤 돌리기</el-button>
   </div>
@@ -83,4 +88,15 @@ const goRandom = () => {
 buildingTeam();
 </script>
 
-<style scoped></style>
+<style scoped>
+.team_building {
+  @apply relative flex justify-around items-center gap-10 mt-[6.5rem] w-[640px];
+}
+img {
+  @apply absolute top-10;
+}
+h2,
+li {
+  @apply text-white;
+}
+</style>
